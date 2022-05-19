@@ -1,18 +1,18 @@
-
 body {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0%;
 }
 
 
-body > h1{
+body>h1 {
     background-color: dodgerblue;
     color: hotpink;
     margin: 0%;
     font-family: 'Koulen', cursive;
 }
 
-input[type=text] {
+input[type=text],
+input[type=date] {
     background-color: yellow;
     color: navy;
 
@@ -26,11 +26,11 @@ input[type=submit] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
 
 
 
-footer{
+footer {
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -42,8 +42,8 @@ footer{
     padding: 10px;
     font-family: 'Koulen', cursive;
 }
-    
-form{
+
+form {
     display: flex;
     flex-flow: column;
 }
