@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <title>jonny and andys events planning</title>
+</head>
+<body>
+    <h1>Lists of Events</h1>
+<form action="/events" method="post">
+
+    <label for="date">Date</label>
+    <input type="text" name="date" id="date">
+
+    <label for="name_event">name of event</label>
+    <input name="name_event" type="text">
+
+    <label for="num_of_guests">number of guests</label>
+    <input type="text" name="num_of_guests" id="21">
+
+    <label for="room">Room</label>
+    <input type="text" name="room" id="room">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+
+    <label for="recurring">Is This Recurring?</label>
+    <input type="checkbox" id="recurring" name="recurring" value="True">
+    <input type="submit" value="Add Event">
+</form>True
+    {% for event in events %}
+    <div>
+        <p>
+            date: {{event.date}}
+            Name of Event: {{event.name_event}}
+            number of guests: {{event.num_of_guests}}
+            venu: {{event.room}}
+            description: {{event.description}}
+            {% if event.recurring %}
+            <span>&#9989;</span>
+            {% endif %}
+
+        </p>
+    </div>
+    {% endfor %}
+    <footer>
+        <p>
+            <h2>jonny and andys events planning &copy;</h2>
+        </p>
+    </footer>
+</body>
+</html>
